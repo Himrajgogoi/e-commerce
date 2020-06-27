@@ -7,11 +7,12 @@ export const addPhone = (newPhone) => ({
     payload: newPhone
 });
 
-export const postPhone = (id, name, model, price) => (dispatch) => {
+export const postPhone = (pid, name, model, image, price) => (dispatch) => {
     const newPhone = {
-        id: id,
+        pid: pid,
         name: name,
         model: model,
+        image: image,
         price: price
     }
 
@@ -81,11 +82,12 @@ export const addTel = (newTel) => ({
     payload: newTel
 });
 
-export const postTel = (id, name, model, price) => (dispatch) => {
+export const postTel = (tid, name, model, image, price) => (dispatch) => {
     const newTel = {
-        id: id,
+        tid: tid,
         name: name,
         model: model,
+        image: image,
         price: price
     }
 
@@ -156,11 +158,12 @@ export const addBook = (newBook) => ({
     payload: newBook
 });
 
-export const postBook = (id, name, author, price) => (dispatch) => {
+export const postBook = (bid, name, author, image, price) => (dispatch) => {
     const newBook = {
-        id: id,
+        bid: bid,
         name: name,
         author: author,
+        image: image,
         price: price
     }
 
@@ -223,4 +226,39 @@ export const addBooks = (books) => ({
 export const booksFailed = (errmess) => ({
     type: ActionTypes.BOOKS_FAILED,
     payload: errmess
+});
+
+export const fetchCart = () => (dispatch) => {
+    dispatch(cartLoading(true));
+
+    return fetch(baseUrl + 'cart')
+        .then(response => {
+            if (response.ok) {
+                return response;
+            } else {
+                var error = new Error("Error" + response.status + ":" + response.statusText);
+                error.response = response;
+                throw error;
+            }
+        }, error => {
+            var errmess = new Error(error.message);
+            throw errmess;
+        })
+        .then(response => response.json())
+        .then(items => dispatch(addItems(items)))
+        .catch(error => dispatch(itemsFailed(error)));
+};
+
+export const addItems = (items) => ({
+    type: ActionTypes.ADD_CART,
+    payload: items
+});
+
+export const cartLoading = () => ({
+    type: ActionTypes.CART_LOADING
+});
+
+export const itemsFailed = (error) => ({
+    type: ActionTypes.CART_FAILED,
+    payload: error
 });

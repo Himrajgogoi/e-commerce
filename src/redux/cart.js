@@ -7,26 +7,32 @@ export const Cart = (state = {
 }, action) => {
 
     switch (action.type) {
-        case ActionTypes.LOAD_BOOKS:
+        case ActionTypes.CART_LOADING:
             return {...state, isLoading: true, errMess: null, items: [] };
+
+        case ActionTypes.ADD_CART:
+            return {...state, isLoading: false, errMess: null, items: action.payload };
 
         case ActionTypes.ADD_BOOK:
             var book = action.payload;
-            return {...state, items: state.items.concat(book) };
+            book.id = state.items.length;
+            return {...state, isLoading: false, errMess: null, items: state.items.concat(book) };
 
-        case ActionTypes.LOAD_PHONES:
-            return {...state, isLoading: true, errMess: null, items: [] };
 
         case ActionTypes.ADD_PHONE:
             var phone = action.payload;
-            return {...state, items: state.items.concat(phone) };
+            phone.id = state.items.length;
+            return {...state, isLoading: false, errMess: null, items: state.items.concat(phone) };
 
-        case ActionTypes.LOAD_TELS:
-            return {...state, isLoading: true, errMess: null, items: [] };
+
 
         case ActionTypes.ADD_TEL:
             var tel = action.payload;
-            return {...state, items: state.items.concat(tel) };
+            tel.id = state.items.length;
+            return {...state, isLoading: false, errMess: null, items: state.items.concat(tel) };
+
+        case ActionTypes.CART_FAILED:
+            return {...state, isLoading: false, errMess: action.payload, items: [] };
 
         default:
             return state;

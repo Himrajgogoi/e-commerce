@@ -19,7 +19,7 @@ export const BOOKS = [{
         name: "The Theory of Everything",
         author: "Stephen Hawking",
         image: "/Assets/Images/books/theory of everything.jpg",
-        featured: "true",
+        featured: true,
         description: "In physicist Stephen Hawking's brilliant opus, A Brief History of Time, he presented us with a bold new look at our universe, how it began, and how our old views of physics and tired theories about the creation of the universe were no longer relevant",
         price: "Rs 380"
     },
@@ -44,7 +44,7 @@ export const BOOKS = [{
         name: "Fahrenheit 451",
         author: "Ray Bradbury",
         image: "/Assets/Images/books/fahrenheit451.jpg",
-        featured: "true",
+        featured: true,
         description: "Fahrenheit 451 is a dystopian novel by American writer Ray Bradbury, first published in 1953. Often regarded as one of his best works, the novel presents a future American society where books are outlawed and 'firemen' burn any that are found.",
         price: "Rs 599"
     }

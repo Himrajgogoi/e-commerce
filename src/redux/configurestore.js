@@ -1,4 +1,6 @@
-import { createStore, combineReducers } from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import logger from 'redux-logger';
 import { Books } from './books';
 import { Phones } from './phones';
 import { Tels } from './televisions';
@@ -11,7 +13,8 @@ export const configureStore = () => {
             phones: Phones,
             tels: Tels,
             cart: Cart
-        })
+        }),
+        applyMiddleware(thunk, logger)
     );
     return store;
 }

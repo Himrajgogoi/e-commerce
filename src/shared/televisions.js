@@ -3,7 +3,7 @@ export const TV = [{
         name: "Sony Bravia 80cm",
         model: "S099BKL",
         image: "/Assets/Images/televisions/sony-tv.jpg",
-        feature: "true",
+        feature: true,
         description: "Resolution: HD Ready (1366x768) | Refresh Rate: 50 hertz Connectivity: 2 HDMI ports to connect set top box, Blu Ray players, gaming console | 1 USB ports to connect hard drives and other USB devices Sound : 20 Watts output | Clear Phase: Clearer, more natural sound | Comes with FM Radio Display : Clear Resolution Enhancer: Fine textures, exquisite detail | X-Protection PRO: Xtra Protection TV | Smart Plug and Play: Easily connect and view photos, music and videos from mobile phone or USB device",
         price: "Rs 15,999"
     },
@@ -36,7 +36,7 @@ export const TV = [{
         name: "VU UltraHD Android TV",
         model: "VU-56645",
         image: "/Assets/Images/televisions/vu-tv.jpg",
-        featured: "true",
+        featured: true,
         description: "Resolution: Full HD (1920x1080) | Refresh Rate: 60 hertz Connectivity: 2 HDMI ports to connect set top box, Blue Ray players, gaming console | 2 USB ports to connect hard drives and other USB devices Sound : 24 Watts output | Dolby Audio | DTS Studio Sound Smart TV Features : Official Android Pie 9.0 | Google play store | Google Eco-system (Movie, TV, Music, Games) | Google Games | Chromecast Built In | Bluetooth 5.0 Display : A+ Grade LED Panel | High Brightness Panel | Adaptive contrast | MPEG Noise Reduction | PC and Game Mode",
         price: "Rs 22,490"
     },

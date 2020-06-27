@@ -12,3 +12,6 @@ export const ADD_BOOK = 'ADD_BOOK';
 export const LOAD_BOOKS = 'LOAD_BOOKS';
 export const BOOKS_FAILED = 'BOOKS_FAILED';
 export const ADD_BOOKS = 'ADD_BOOKS';
+export const ADD_CART = "ADD_CART";
+export const CART_LOADING = "CART_LOADING";
+export const CART_FAILED = "CART_FAILED";

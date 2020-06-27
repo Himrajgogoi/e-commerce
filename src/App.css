@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+.jumbotron {
+    margin: 0px auto;
+    padding: 90px 20px 90px 20px;
+    color: floralwhite;
+    background-image: url(https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.row-content {
+    margin: 0px auto;
+    padding: 50px 0px 50px 0px;
+    border-bottom: 2px ridge;
+    min-height: 400px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.row-content2 {
+    margin: 0px auto;
+    padding: 50px 0px 50px 0px;
+    min-height: 400px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.footer {
+    margin: 0px auto;
+    padding: 50px 0px 50px 0px;
+    background-color: black;
+    color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.address {
+    font-size: 100%;
+    color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+    padding: 0px 0px 0px 0px;
+    z-index: 0;
+}
+
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.carousel-item {
+    background: purple;
+}
+
+.crsl {
+    color: ghostwhite;
+}
+
+#carouselButton {
+    right: 0px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 2;
 }
