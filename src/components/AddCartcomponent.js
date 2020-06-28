@@ -23,7 +23,10 @@ function AddCart(props) {
                 CardText >
                 <
                 Button color = "success" > Check Out < /Button> <
-                Button color = "warning" > Delete from Cart < /Button> < /
+                Button color = "warning"
+                onClick = {
+                    () => props.del(item.id, props.items)
+                } > Delete from Cart < /Button> < /
                 CardBody > < /
                 Card > <
                 /div>  );

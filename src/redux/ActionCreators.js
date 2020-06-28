@@ -262,3 +262,49 @@ export const itemsFailed = (error) => ({
     type: ActionTypes.CART_FAILED,
     payload: error
 });
+
+export const del = (id, cart) => (dispatch) => {
+
+    const delt = cart.items.map((item) => {
+        if (id === item.id) {
+            return fetch(baseUrl + "cart/" + id, {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    credentials: 'same-origin'
+                })
+                .then(response => {
+                    if (response.ok) {
+                        return response;
+                    } else {
+                        var error = new Error("Error: " + response.status + " : " + response.statusText);
+                        error.response = response;
+                        throw error;
+                    }
+                }, error => {
+                    var errmess = new Error(error.message);
+                    throw errmess;
+                })
+                .then(response => response.json())
+                .then(data => {
+                    alert("deleted item with id: " + id);
+                    console.log("deleted item with id: " + id);
+                    dispatch(delItem(id));
+                })
+                .catch(error => {
+                    alert("Error:" + error.message);
+                    console.log("Error:" + error.message)
+                });
+
+        }
+    });
+    return delt;
+
+
+}
+
+export const delItem = (id) => ({
+    type: ActionTypes.DEL_ITEM,
+    payload: id
+});

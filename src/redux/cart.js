@@ -34,6 +34,10 @@ export const Cart = (state = {
         case ActionTypes.CART_FAILED:
             return {...state, isLoading: false, errMess: action.payload, items: [] };
 
+        case ActionTypes.DEL_ITEM:
+            var id = action.payload;
+            return {...state, isLoading: false, errMess: null, items: state.items.filter((item) => item.id !== id) };
+
         default:
             return state;
     }

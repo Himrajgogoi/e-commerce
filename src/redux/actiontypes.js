@@ -15,3 +15,4 @@ export const ADD_BOOKS = 'ADD_BOOKS';
 export const ADD_CART = "ADD_CART";
 export const CART_LOADING = "CART_LOADING";
 export const CART_FAILED = "CART_FAILED";
+export const DEL_ITEM = "DEL_ITEM";

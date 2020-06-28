@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 function Tels(props) {
     const tels = props.tels.tels.map((tel) => {
-        return ( < div className = "col-12 col-md-5 mt-5 ml-5" >
+        return ( < div className = "col-12 col-md-4 offset-md-1 mt-5 mb-5" >
             <
             Link to = { `/televisions/${tel.tid}` } >
             <

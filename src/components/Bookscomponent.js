@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function Books(props) {
     const book = props.books.books.map((book) => {
         return ( <
-            div className = "col-12 col-md-5 mt-5 ml-5" >
+            div className = "col-12 col-md-4 offset-md-1 mt-5 mb-5 justify-content-center" >
 
             <
             Link to = { `/books/${book.bid}` } >
@@ -36,7 +36,7 @@ function Books(props) {
     if (props.books.isLoading) {
         return ( < div className = "container" > < div className = "row" > < Loading / > < /div></div > );
     } else if (props.books.errMess) {
-        return ( < div className = "row" > { props.phones.errMess } < /div>)
+        return ( < div className = "row" > { props.books.errMess } < /div>)
         }
         else {
             return ( < div className = "container" >

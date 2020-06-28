@@ -10,19 +10,19 @@ import Tels from './Televisionscomponent';
 import Teldetails from './Teldetailscomponent';
 import AddCart from './AddCartcomponent';
 import Footer from './Footercomponent';
-import { fetchBooks, fetchPhones, fetchTels, postBook, postPhone, postTel, fetchCart } from '../redux/ActionCreators';
+import { fetchBooks, fetchPhones, fetchTels, postBook, postPhone, postTel, fetchCart, del } from '../redux/ActionCreators';
 import { Route, Redirect, Switch, withRouter, } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-const MapStatetoProps = state => {
-    return {
-        books: state.books,
-        phones: state.phones,
-        tels: state.tels,
-        cart: state.cart
-    }
+const MapStatetoProps = state => ({
 
-};
+    books: state.books,
+    phones: state.phones,
+    tels: state.tels,
+    cart: state.cart
+
+
+});
 
 const MapDispatchtoProps = dispatch => ({
     fetchBooks: () => { dispatch(fetchBooks()) },
@@ -31,7 +31,8 @@ const MapDispatchtoProps = dispatch => ({
     fetchCart: () => { dispatch(fetchCart()) },
     postPhone: (id, name, model, image, price) => dispatch(postPhone(id, name, model, image, price)),
     postTel: (id, name, model, image, price) => dispatch(postTel(id, name, model, image, price)),
-    postBook: (id, author, name, image, price) => dispatch(postBook(id, author, name, image, price))
+    postBook: (id, author, name, image, price) => dispatch(postBook(id, author, name, image, price)),
+    del: (id, items) => dispatch(del(id, items))
 
 });
 
@@ -129,6 +130,7 @@ class Main extends Component {
                                 Route path = "/cart"
                                 component = {
                                     () => < AddCart items = { this.props.cart }
+                                    del = { this.props.del }
                                     />}/ > <
                                     Redirect to = "/home" / >
                                     <

@@ -18,14 +18,14 @@ class Header extends Component {
 
             <
             Navbar dark expand = "md"
-            color = "primary" >
+            fixed color = "primary" >
             <
             div className = "container" >
             <
-            NavbarToggler oClick = { this.toggleNav } > < /NavbarToggler> <
+            NavbarToggler onClick = { this.toggleNav } > < span className = "fa fa-toggle-down fa-lg" > < /span> < /NavbarToggler > <
             NavbarBrand > < h4 > E - commerce < /h4></NavbarBrand >
             <
-            Collapse isopen = { this.state.NavOpen }
+            Collapse isOpen = { this.state.NavOpen }
             navbar >
             <
             Nav navbar >
