@@ -46,11 +46,11 @@ function Footer(props) {
         <
         div className = "align-text-center" >
         <
-        a className = "btn btn-social-icon btn-google"
-        href = "#" > < i class = "fa fa-google fa-lg" > < /i></a >
+        Link className = "btn btn-social-icon btn-google"
+        to = "/home" > < i class = "fa fa-google fa-lg" > < /i></Link >
         <
-        a className = "btn btn-social-icon btn-facebook"
-        href = "#" > < i class = "fa fa-facebook fa-lg" > < /i></a >
+        Link className = "btn btn-social-icon btn-facebook"
+        to = "/home" > < i class = "fa fa-facebook fa-lg" > < /i></Link >
         <
         /div> < /
         div >

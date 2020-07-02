@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardBody, CardText, CardImg, Modal, ModalBody, ModalHeader, ModalFooter, Media } from 'reactstrap';
+import { Card, CardBody, CardText, CardImg } from 'reactstrap';
 import { Loading } from './Loadingcomponent';
 import { baseUrl } from '../baseUrl';
 

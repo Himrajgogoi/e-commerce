@@ -3,7 +3,7 @@ import Header from './Headercomponent';
 import Home from './Homecomponent';
 import Books from './Bookscomponent';
 import Bookdetails from './Bookdetailscomponent';
-import Electronics from './Electronicscomponent';
+
 import Phones from './Phonescomponent';
 import Phonedetails from './Phonedetailscomponent';
 import Tels from './Televisionscomponent';

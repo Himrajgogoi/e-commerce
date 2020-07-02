@@ -15,20 +15,20 @@ export const Cart = (state = {
 
         case ActionTypes.ADD_BOOK:
             var book = action.payload;
-            book.id = state.items.length;
+            book.id = state.items.length + 1;
             return {...state, isLoading: false, errMess: null, items: state.items.concat(book) };
 
 
         case ActionTypes.ADD_PHONE:
             var phone = action.payload;
-            phone.id = state.items.length;
+            phone.id = state.items.length + 1;
             return {...state, isLoading: false, errMess: null, items: state.items.concat(phone) };
 
 
 
         case ActionTypes.ADD_TEL:
             var tel = action.payload;
-            tel.id = state.items.length;
+            tel.id = state.items.length + 1;
             return {...state, isLoading: false, errMess: null, items: state.items.concat(tel) };
 
         case ActionTypes.CART_FAILED:

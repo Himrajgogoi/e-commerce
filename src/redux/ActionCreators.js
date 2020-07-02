@@ -266,6 +266,7 @@ export const itemsFailed = (error) => ({
 export const del = (id, cart) => (dispatch) => {
 
     const delt = cart.items.map((item) => {
+
         if (id === item.id) {
             return fetch(baseUrl + "cart/" + id, {
                     method: 'DELETE',
@@ -288,9 +289,9 @@ export const del = (id, cart) => (dispatch) => {
                 })
                 .then(response => response.json())
                 .then(data => {
-                    alert("deleted item with id: " + id);
-                    console.log("deleted item with id: " + id);
-                    dispatch(delItem(id));
+                    alert("deleted item with id: " + (id))
+                    console.log("deleted item with id: " + (id))
+                    dispatch(delItem(id))
                 })
                 .catch(error => {
                     alert("Error:" + error.message);
@@ -298,6 +299,9 @@ export const del = (id, cart) => (dispatch) => {
                 });
 
         }
+
+
+
     });
     return delt;
 
